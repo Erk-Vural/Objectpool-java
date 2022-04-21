@@ -1,0 +1,20 @@
+@startuml
+
+class Client
+
+abstract class ObjectPool {
+ + instance :array
+ + get()
+}
+
+class ReusablePool {
+ + doSomething()
+}
+
+ObjectPool o--> ReusablePool
+
+Client --> ObjectPool
+
+Client --> ReusablePool
+
+@enduml
