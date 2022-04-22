@@ -29,7 +29,6 @@ abstract class ObjectPool<T> {
                     // object has dead
                     unlock.remove(t);
                     dead(t);
-                    t = null;
                 } else {
                     if (validate(t)) {
                         unlock.remove(t);
@@ -39,7 +38,6 @@ abstract class ObjectPool<T> {
                         // object failed validation
                         unlock.remove(t);
                         dead(t);
-                        t = null;
                     }
                 }
             }

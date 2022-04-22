@@ -13,8 +13,8 @@ class ReusablePool {
 
 ObjectPool o--> ReusablePool
 
-Client --> ObjectPool
+Client -> ObjectPool
 
-Client --> ReusablePool
+Client -> ReusablePool
 
 @enduml
